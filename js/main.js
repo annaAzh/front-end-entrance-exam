@@ -1,24 +1,24 @@
-import '../css/style.css'
-import javascriptLogo from '../javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import { localeStorage } from './locale-storage.js'
+import { createRipple } from './ripple.js'
+import { createPDF } from './create-to-pdf.js'
+import { editContent } from './edit-content.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+const editable = document.querySelectorAll('.editable')
 
-setupCounter(document.querySelector('#counter'))
+const { getSavedDataFromLocaleStorage } = localeStorage()
+
+editable.forEach((el, i) => (el.dataset.key = i))
+getSavedDataFromLocaleStorage()
+editContent()
+;[
+  ...document.querySelectorAll('.section'),
+  document.querySelector('.download'),
+  document.querySelector('.contact')
+].forEach(section => {
+  if (section) {
+    section.addEventListener('click', createRipple)
+  }
+})
+
+const downloadButton = document.querySelector('.download')
+downloadButton.addEventListener('click', createPDF)
