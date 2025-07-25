@@ -175,7 +175,7 @@ h2 {
 .job {
   font-size: 12px;
   line-height: 150%;
-  color: var(dark-grey);
+  color: var(--dark-grey);
 }
 
 .section#personal-info {
