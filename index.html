@@ -1,13 +1,200 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>CV</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <button class="download">Download pdf</button>
+    <main class="main element-to-pdf">
+      <div class="top-section">
+        <div class="personal-info-wrapper">
+          <div id="photo" class="section">
+            <img src="./assets/images/profileImg.png" alt="profile image">
+          </div>
+          <section id="personal-info" class="section">
+            <div class="greeting editable">Hello 👋🏻 I’m</div>
+            <h1 class="name editable">Graham Hunt</h1>
+            <p class="job editable">Brand/Logo Designer</p>
+          </section>
+        </div>
+
+        <section id="languages" class="section">
+          <h2 class="editable">Languages</h2>
+          <div class="flex-col">
+            <div class="lang editable">English</div>
+            <div id="lang1" class="range" style="width: 100%;"></div>
+            <div class="lang editable">Spanish</div>
+            <div id="lang2" class="range" style="width:  80%;"></div>
+            <div class="lang editable">French</div>
+            <div id="lang3" class="range" style="width: 60%;"></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="middle-section">
+        <section id="education" class="section">
+          <h2 class="editable">Education</h2>
+          <div class="education-card-wrapper">
+            <div class="education-card green">
+              <img class="heart" src="./assets/icons/heart.svg" alt="heart icon">
+              <h4 class="year editable">2024</h4>
+              <p class="editable"><strong>UX/UI</strong></p>
+              <p class="hashtags editable">#UX #UI #research #DesignSystem #Agile #wireframing #figma #IA</p>
+              <p class="editable">Neoland</p>
+            </div>
+
+            <div class="education-card">
+              <h4 class="year editable">2022</h4>
+              <p class="editable"><strong>Product designer</strong></p>
+              <p class="hashtags editable">#analytics #research #prototype #wireframes</p>
+              <p class="editable">Coursera</p>
+            </div>
+
+            <div class="education-card">
+              <h4 class="year editable">2017–2021</h4>
+              <p class="editable"><strong>Graphic design</strong></p>
+              <p class="hashtags editable">#branding #web #illustration #adobe</p>
+              <p class="editable">Calli Institute of the Arts</p>
+            </div>
+          </div>
+
+        </section>
+        <div>
+          <section id="interests" class="section">
+            <h2 class="editable">Interests</h2>
+            <div class="interest-tags">
+              <div class="interest-tag editable">branding</div>
+              <div class="interest-tag editable">brand identity</div>
+              <div class="interest-tag editable">logo</div>
+              <div class="interest-tag editable">typography</div>
+              <div class="interest-tag editable">photography</div>
+              <div class="interest-tag editable">designing</div>
+              <div class="interest-tag editable">poster design</div>
+              <div class="interest-tag editable">research</div>
+              <div class="interest-tag editable">social networks</div>
+              <div class="interest-tag editable">illustration</div>
+            </div>
+          </section>
+          <div class="contact">
+            <p class="contact-title editable">Let´s chat! I´m ready to work on excinting projects</p>
+            <div class="contact-wrapper">
+              <p class="email editable">ivann19bj@gmail.com</p>
+              <span>|</span>
+              <p class="phone editable">+34 666 666 666</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <section class="tools section">
+          <h2 class="editable">Tools</h2>
+          <div class="tools-wrapper">
+            <div class="tool-block">
+
+              <p class="tool-title">design</p>
+              <div class="tool-category">
+                <img class="logo" src="./assets/icons/logoFigma.svg" alt="logo Figma">
+                <img class="logo" src="./assets/icons/logoCreativeCloud.png" alt="logo CreativeCloud">
+                <img class="logo" src="./assets/icons/logoMiro.png" alt="logo Miro">
+                <img class="logo" src="./assets/icons/logoNotion.png" alt="logo Notion">
+                <img class="logo" src="./assets/icons/logoMeet.png" alt="logo Meet">
+                <img class="logo" src="./assets/icons/logoanalytics.png" alt="logo Analytics">
+              </div>
+            </div>
+
+            <div class="tool-block">
+              <p class="tool-title">no-code</p>
+              <div class="tool-category">
+                <img class="logo" src="./assets/icons/logoZapìer.png" alt="logo Zapìer">
+                <img class="logo" src="./assets/icons/logoWebflow.png" alt="logo Webflow">
+                <img class="logo" src="./assets/icons/logoFramer.png" alt="logo Framer">
+                <img class="logo" src="./assets/icons/logoWordpress.png" alt="logo Wordpress">
+              </div>
+            </div>
+
+            <div class="tool-block">
+              <p class="tool-title">artificial intelligence</p>
+              <div class="tool-category">
+                <img class="logo" src="./assets/icons/logoChatGPT.png" alt="logo ChatGPT">
+                <img class="logo" src="./assets/icons/logoCopilot.png" alt="logo Copilot">
+                <img class="logo" src="./assets/icons/logoMidjourney.png" alt="logo Midjourney">
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="experience section">
+          <h2 class="editable">Experience</h2>
+          <div class="exp-card green">
+            <p class="date editable">Jul. 2023 – Ago. 2023</p>
+            <div class="exp-wrapper">
+              <div class="exp-column">
+                <p class="editable"><strong class="exp-job">Senior Graphic Designer</strong> – Pinnacle | Full-time</p>
+              </div>
+
+              <ul>
+                <li class="editable">Research and brainstorm various design ideas for content and marketing.</li>
+                <li class="editable">Review the work submitted by Junior Designers and share feedback.</li>
+              </ul>
+            </div>
+            <span class="recent">most recent</span>
+          </div>
+
+          <div class="exp-card">
+            <p class="date editable">Ene. 2021 – Jul. 2023</p>
+            <div class="exp-wrapper">
+              <div class="exp-column">
+                <p class="editable"><strong class="exp-job">Graphic / Web designer</strong> – Double Square | Full-time
+                </p>
+              </div>
+              <ul>
+                <li class="editable">Development of internal projects from scratch, product design of brands.</li>
+                <li class="editable">Landing pages, webapps and hybrid apps.</li>
+                <li class="editable">Taking decisions with stakeholders for future products.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="exp-card">
+            <p class="date editable">Feb. 2021 – Jul. 2023</p>
+            <div class="exp-wrapper">
+              <div class="exp-column">
+                <p class="editable"><strong class="exp-job">Graphic Designer</strong> – Freelance</p>
+              </div>
+              <ul>
+                <li class="editable">Visual design for events, brands and products.</li>
+                <li class="editable">Product design, packaging design.</li>
+                <li class="editable">Logo design.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+
+  <div class="overlay hide"></div>
+  <div class="modal hide" data-modal>
+    <div class="popup-inner">
+      <div class="popup-content">
+        <div class="close">&times;</div>
+        <input type="text" class="modal-input">
+        <button class="save-btn">Сохранить</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+
 </html>
